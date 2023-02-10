@@ -1,12 +1,11 @@
 import './App.scss';
-import Button from 'react-bootstrap/Button';
-
-
+import {RouterProvider} from "react-router-dom";
+import {router} from './Router';
 
 function App() {
   return (
     <div className="App">
-      <Button variant="primary" onClick={() => alert('click')}>Alert</Button>
+      <RouterProvider router={router} />
     </div>
   );
 }
