@@ -1,0 +1,16 @@
+.navbar {
+  border: 1px solid #000;
+  .cart-img {
+    height: 60px;
+    margin-right: 20px;
+  }
+  .avatar {
+    height: 60px;
+    width: 60px;
+    margin: 0 20px;
+  }
+  .navbar-text {
+    display: flex;
+    align-items: center;
+  }
+}
