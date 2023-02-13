@@ -12,7 +12,6 @@ export const Header = () => {
     <Navbar className='header-navbar'>
       <Container className='container'>
         <Navbar.Brand>JS BAND STORE / Your full name</Navbar.Brand>
-        <Navbar.Toggle />
         <Navbar.Collapse className="justify-content-end">
           {location.pathname !== "/signin" && <Nav>
             <Image src={cartImg} alt="shopping cart icon" className="cart-img" rounded />
