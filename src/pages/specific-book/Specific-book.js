@@ -3,6 +3,8 @@ import { Image, Button } from "react-bootstrap";
 import "./Specific-book.scss";
 
 import book from "../../img/book.jpg";
+import arrowUp from "../../img/arrowUp.svg";
+import arrowDown from "../../img/arrowDown.svg";
 
 export const SpecificBook = () => {
   return (
@@ -36,8 +38,12 @@ export const SpecificBook = () => {
           <div className="countButton">
             <Button variant="outline-dark">Card</Button>
             <div className="countButtonArrow">
-              <Button variant="outline-dark" className="addCard"></Button>
-              <Button variant="outline-dark" className="addCard"></Button>
+              <Button variant="outline-dark" className="buttonArrow">
+                <img src={arrowUp} alt="arrowUp" className="imgArrow" />
+              </Button>
+              <Button variant="outline-dark" className="buttonArrow">
+                <img src={arrowDown} alt="arrowDown" className="imgArrow" />
+              </Button>
             </div>
           </div>
         </div>
@@ -49,5 +55,4 @@ export const SpecificBook = () => {
       </section>
 
     </main>
-  )
-}
+  )}
