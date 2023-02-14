@@ -11,8 +11,9 @@ export const Signin = () => {
 
       <p class="h4">Username</p>
       <form name="full-name" action="#">
-        <input type="text" name="username" id="name" placeholder="type Username"/>
-        <input type="submit" id="button" value="Sign-in"/>
+        <input type="text" name="username" id="name" placeholder="type Username" />
+        <input type="submit" id="button" value="Sign-in" />
       </form>
     </main>
-  )}
+  )
+}
