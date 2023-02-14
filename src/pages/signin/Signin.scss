@@ -1,0 +1,27 @@
+.signin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .avatar2 {
+    height: 160px;
+    margin-top: 5em;
+    margin-bottom: 2em;
+    border: 0.01em solid rgb(208, 208, 248);
+  }
+  #button,
+  #name {
+    width: 200px;
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+  }
+}
+@media (max-width: 320px) {
+  .avatar2 {
+    width: 200px;
+  }
+  #name,
+  #button {
+    width: 304px;
+  }
+}
