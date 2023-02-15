@@ -8,5 +8,15 @@
     .title {
       font-weight: bolder;
     }
+    .value {
+      text-align: right;
+    }
+  }
+  .cart-info {
+    border: 1px dashed #000;
+    .btn-row {
+      flex-direction: row-reverse;
+      
+    }
   }
 }
