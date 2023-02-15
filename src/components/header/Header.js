@@ -1,5 +1,8 @@
 import { Button, Nav, Image, Navbar, Container } from 'react-bootstrap';
 import { useLocation } from "react-router-dom"
+import { useContext } from 'react';
+
+import { UserContext } from '../../context/context';
 
 import "./Header.scss";
 
@@ -7,6 +10,7 @@ import cartImg from "../../img/cart.svg";
 import avatarImg from "../../img/avatar.svg"
 
 export const Header = () => {
+  const [user, setUser] = useContext(UserContext);
   const location = useLocation();
   return (
     <Navbar className='header-navbar'>
@@ -15,11 +19,11 @@ export const Header = () => {
         <Navbar.Collapse className="justify-content-end">
           {location.pathname !== "/signin" && <Nav>
             <Image src={cartImg} alt="shopping cart icon" className="cart-img" rounded />
-            <Button variant="outline-dark" >Sign-Out</Button>
+            <Button variant="outline-dark" onClick={() => setUser(null)} >Sign-Out</Button>
             <div className='avatar'>
               <Image src={avatarImg} alt="avatar" rounded />
             </div>
-            <Navbar.Text className='navbar-text'>Username</Navbar.Text>
+            <Navbar.Text className='navbar-text'>{user}</Navbar.Text>
           </Nav>}
         </Navbar.Collapse>
       </Container>
