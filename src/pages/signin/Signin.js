@@ -1,16 +1,18 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { Container, Image, Form, Button } from "react-bootstrap";
+
+import { UserContext } from "../../context/context";
 
 import avatar2 from "../../img/avatar2.svg";
 
 import "./Signin.scss";
 
 export const Signin = () => {
+  const setUser = useContext(UserContext)[1];
   const [name, setName] = useState("");
   const handleForm = (e) => {
     e.preventDefault();
-    console.log(name);
-
+    setUser(name)
   }
   return (
     <Container className="signin">
