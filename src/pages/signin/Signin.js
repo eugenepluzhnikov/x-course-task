@@ -14,6 +14,8 @@ export const Signin = () => {
   const [name, setName] = useState("");
   const handleForm = (e) => {
     e.preventDefault();
+    if(!name)return;
+    localStorage.setItem("user", name);
     setUser(name);
     navigate('/books');
   }

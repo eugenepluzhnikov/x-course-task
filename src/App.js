@@ -7,7 +7,7 @@ import { UserContext } from './context/context';
 
 
 const App = () => {
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState(localStorage.getItem('user')|| null);
   return (
     <main className="app">
       <UserContext.Provider value={[user, setUser]}>

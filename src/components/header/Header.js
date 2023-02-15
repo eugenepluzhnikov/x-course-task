@@ -12,6 +12,10 @@ import avatarImg from "../../img/avatar.svg"
 export const Header = () => {
   const [user, setUser] = useContext(UserContext);
   const location = useLocation();
+  const handleSignOut = () => {
+    localStorage.removeItem('user');
+    setUser(null);
+  }
   return (
     <Navbar className='header-navbar'>
       <Container className='container'>
@@ -19,7 +23,7 @@ export const Header = () => {
         <Navbar.Collapse className="justify-content-end">
           {location.pathname !== "/signin" && <Nav>
             <Image src={cartImg} alt="shopping cart icon" className="cart-img" rounded />
-            <Button variant="outline-dark" onClick={() => setUser(null)} >Sign-Out</Button>
+            <Button variant="outline-dark" onClick={handleSignOut} >Sign-Out</Button>
             <div className='avatar'>
               <Image src={avatarImg} alt="avatar" rounded />
             </div>
