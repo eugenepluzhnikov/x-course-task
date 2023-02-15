@@ -41,7 +41,7 @@ export const SpecificBook = () => {
               <Button variant="outline-dark" className="buttonArrow">
                 <img src={arrowUp} alt="arrowUp" className="imgArrow" />
               </Button>
-              <Button variant="outline-dark" className="buttonArrow">
+              <Button variant="outline-dark" className="buttonArrow ">
                 <img src={arrowDown} alt="arrowDown" className="imgArrow" />
               </Button>
             </div>
