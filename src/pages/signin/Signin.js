@@ -1,5 +1,6 @@
 import { useState, useContext } from "react";
 import { Container, Image, Form, Button } from "react-bootstrap";
+import { useNavigate } from 'react-router-dom';
 
 import { UserContext } from "../../context/context";
 
@@ -8,11 +9,13 @@ import avatar2 from "../../img/avatar2.svg";
 import "./Signin.scss";
 
 export const Signin = () => {
+  const navigate = useNavigate();
   const setUser = useContext(UserContext)[1];
   const [name, setName] = useState("");
   const handleForm = (e) => {
     e.preventDefault();
-    setUser(name)
+    setUser(name);
+    navigate('/books');
   }
   return (
     <Container className="signin">
