@@ -1,51 +1,12 @@
-.specificBook {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 30px;
-  .book {
-    width: 300px;
-    margin-left: 30px;
-    border: 2px solid #000;
+.specific-book {
+  margin-top: 20px;
+  .img-book {
+    width: 100%;
   }
-  .bookName {
-    font-weight: bolder;
-    margin-top: 40px;
+  .info {
+    margin-bottom: 20px;
     .title {
-      margin-bottom: 20px;
-      .name {
-        font-weight: normal;
-        margin-left: 20px;
-      }
-    }
-  }
-  .prise {
-    border: 1px darken #000;
-    margin-right: 30px;
-    width: 300px;
-    margin-top: 40px;
-    .priceTitle {
-      margin-bottom: 20px;
       font-weight: bolder;
-      display: flex;
-      justify-content: space-between;
-      .countButton {
-        display: flex;
-        .countButtonArrow {
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-          .buttonArrow {
-            display: flex;
-            // height: 50%;
-            .imgArrow {
-              width: 10px;
-            }
-          }
-        }
-      }
-    }
-    .addCard {
-      float: right;
     }
   }
 }
