@@ -15,8 +15,8 @@
   .cart-info {
     border: 1px dashed #000;
     .btn-row {
-      flex-direction: row-reverse;
-      
+      justify-content: right;
+      display: flex;
     }
   }
 }
