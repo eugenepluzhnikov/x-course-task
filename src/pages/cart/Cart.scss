@@ -1,0 +1,17 @@
+.cart {
+  margin-top: 20px;
+  .cart-bt {
+    float: right;
+  }
+  .empty-basket {
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    .cart-img {
+      height: 200px;
+    }
+    .empty {
+      text-align: center;
+    }
+  }
+}
