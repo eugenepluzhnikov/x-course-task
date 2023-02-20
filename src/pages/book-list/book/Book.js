@@ -1,30 +1,38 @@
 
-import { Image, Button, Container, Row, Col, Form } from "react-bootstrap";
+import { Image, Button, Row, Col} from "react-bootstrap";
+import { useNavigate } from 'react-router-dom';
 
-import bookImg from "../../../img/book.jpg";
+
 import "./Book.scss";
 
 
-export const Book = () => {
+export const Book = ({image, title, author, price, id}) => {
+  const navigate = useNavigate();
+
   return (
-    <Row className="form-book">
-      <Row>
-        <Image src={bookImg} />
-      </Row>
-      <Row>
-        <Col className="title-book">Book name:</Col>
-        <Col>Book name</Col>
-      </Row>
-      <Row>
-        <Col className="title-book">Book author:</Col>
-        <Col>Book author</Col>
-      </Row>
-      <Row>
-        <Col className="title-book">Price:</Col>
-        <Col>
-          <Form.Control type="number" />
-        </Col>
-      </Row>
-    </Row>
+
+    <Col className="book-view" md={4} >
+      <div className="form-book">
+        <Row>
+          <Image src={image} />
+        </Row>
+        <Row>
+          <Col className="title-book">Book name:</Col>
+          <Col>{title}</Col>
+        </Row>
+        <Row>
+          <Col className="title-book">Book author:</Col>
+        <Col>{author}</Col>
+        </Row>
+        <Row>
+          <Col className="title-book">Price: {price}</Col>
+          <Col>
+            <Button variant="outline-dark" onClick={() => navigate(`/books/${id}`)}>
+              View
+            </Button>
+          </Col>
+        </Row>
+      </div>
+    </Col>
   )
 }

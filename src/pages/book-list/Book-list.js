@@ -1,4 +1,4 @@
-import { Image, Button, Container, Row, Col, Form } from "react-bootstrap";
+import {Container, Row, Col, Form } from "react-bootstrap";
 
 import "./Book-list.scss";
 
@@ -11,7 +11,7 @@ export const BookList = () => {
 
   return (
     <Container>
-      <Row md={7} className="form-book-list">
+      <Row className="form-book-list">
         <Col md={7}>
           <Form.Control type="number" placeholder="Search my book name" />
         </Col>
@@ -21,8 +21,11 @@ export const BookList = () => {
           </Form.Select>
         </Col>
       </Row>
-      <Row className="book" md={3}>
-        <Book />
+      <Row className="book" >
+        {data.books.map((book) => {
+          return <Book key={book.id} {...book} />
+        })
+        }
       </Row>
     </Container>
   )
