@@ -1,17 +1,14 @@
 .cart {
   margin-top: 20px;
+  height: 100%;
   .cart-bt {
     float: right;
+    margin-bottom: 20px;
   }
   .empty-basket {
-    align-items: center;
     justify-content: center;
-    height: 100%;
-    .cart-img {
-      height: 200px;
+    height: 100%; 
     }
-    .empty {
-      text-align: center;
-    }
+    
   }
-}
+

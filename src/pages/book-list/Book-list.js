@@ -2,7 +2,7 @@ import { Image, Button, Container, Row, Col, Form } from "react-bootstrap";
 
 import "./Book-list.scss";
 
-import { Book } from "../../components/book/Book";
+import { Book } from "./book/Book";
 import data from "../../fixtures/books.json"
 
 

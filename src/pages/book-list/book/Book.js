@@ -1,7 +1,7 @@
 
 import { Image, Button, Container, Row, Col, Form } from "react-bootstrap";
 
-import bookImg from "../../img/book.jpg"
+import bookImg from "../../../img/book.jpg";
 import "./Book.scss";
 
 
