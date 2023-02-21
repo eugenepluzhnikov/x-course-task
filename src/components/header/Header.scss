@@ -1,20 +1,23 @@
 .header-navbar {
   border: 1px solid #000;
   .container {
-width: 100%;
-  
-  .cart-img {
-    height: 40px;
-    margin-right: 20px;
+    width: 100%;
+    .healer-cart-img {
+      width: 65px;
+      margin-right: 20px;
+    }
+    .cart-img {
+      height: 40px;
+      // margin-ri
+    }
+    .avatar {
+      height: 40px;
+      width: 40px;
+      margin: 0 20px;
+    }
+    .navbar-text {
+      display: flex;
+      align-items: center;
+    }
   }
-  .avatar {
-    height: 40px;
-    width: 40px;
-    margin: 0 20px;
-  }
-  .navbar-text {
-    display: flex;
-    align-items: center;
-  }
-}
 }

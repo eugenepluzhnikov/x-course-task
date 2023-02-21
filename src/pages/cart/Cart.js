@@ -1,7 +1,7 @@
 import {Button, Container, Row } from "react-bootstrap";
 
-import { BookPrice } from "./component/Book-price";
-import { CartEmpty } from "./component/Cart-empty";
+import { BookPrice } from "./Book-price/Book-price";
+import {CartEmpty} from "./Cart-empty/Cart-empty";
 
 
 import "./Cart.scss";
