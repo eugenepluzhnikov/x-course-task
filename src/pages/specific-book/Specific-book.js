@@ -20,7 +20,6 @@ export const SpecificBook = () => {
   if (!book) return (<Navigate to="/books" replace />);
 
   const handleAddToCart = () => {
-    console.log(typeof amount)
     const newCart = [...cart];
     const cartItem = newCart.find((item) => item.id === +id)
     if (cartItem) {
@@ -28,7 +27,6 @@ export const SpecificBook = () => {
     } else {
       newCart.push({ id: +id, amount })
     }
-    console.log(newCart);
     setCart(newCart)
   };
 
