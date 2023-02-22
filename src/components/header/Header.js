@@ -16,35 +16,35 @@ export const Header = () => {
   const [user, setUser] = useContext(UserContext);
   const location = useLocation();
 
-const handleSignOut = () => {
-  localStorage.removeItem('user');
-  setUser(null);
-}
+  const handleSignOut = () => {
+    localStorage.removeItem('user');
+    setUser(null);
+  }
 
-return (
-  <Navbar className='header-navbar'>
-    <Container className='container'>
-      <Navbar.Brand onClick={()=>navigate('/books')}>JS BAND STORE / Evgen Pluzhnikov</Navbar.Brand>
-      <Navbar.Collapse className="justify-content-end">
-        
-        {location.pathname !== "/signin" && <Nav>
+  return (
+    <Navbar className='header-navbar'>
+      <Container className='container'>
+        <Navbar.Brand onClick={() => navigate('/books')}>JS BAND STORE / Evgen Pluzhnikov</Navbar.Brand>
+        <Navbar.Collapse className="justify-content-end">
 
-          <Button variant="outline-dark" className='healer-cart-img' onClick={() => navigate('/cart')}>
-            <Image src={cartImg} alt="shopping cart icon" className="cart-img" rounded />
-            ({cart.length})
-          </Button>
+          {location.pathname !== "/signin" &&
+            <Nav>
+              <Button variant="outline-dark" className='healer-cart-img' onClick={() => navigate('/cart')}>
+                <Image src={cartImg} alt="shopping cart icon" className="cart-img" rounded />
+                ({cart.length})
+              </Button>
 
-          <Button variant="outline-dark" onClick={handleSignOut} >Sign-Out</Button>
+              <Button variant="outline-dark" onClick={handleSignOut} >Sign-Out</Button>
 
-          <div className='avatar'>
-            <Image src={avatarImg} alt="avatar" rounded />
-          </div>
-          <Navbar.Text className='navbar-text'>{user}</Navbar.Text>
-        </Nav>}
+              <div className='avatar'>
+                <Image src={avatarImg} alt="avatar" rounded />
+              </div>
+              <Navbar.Text className='navbar-text'>{user}</Navbar.Text>
+            </Nav>}
 
-      </Navbar.Collapse>
-    </Container>
-  </Navbar>
-);
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
+  );
 }
 

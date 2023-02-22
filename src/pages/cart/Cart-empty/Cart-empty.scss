@@ -1,7 +1,11 @@
-.cart-empty-img {
-  margin-top: 50px;
-  height: 200px;
-  width: 200px;
-  text-align: center;
-  justify-content: center;
+.empty-basket {
+  width: 100%;
+  .cart-img {
+    text-align: center;
+    height: 250px;
+    margin-top: 70px;
+    .cart-empty-img {
+      height: 200px;
+    }
+  }
 }
