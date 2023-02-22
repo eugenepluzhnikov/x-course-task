@@ -3,7 +3,7 @@ import { useLocation, useNavigate } from "react-router-dom"
 import { useContext } from 'react';
 
 
-import { UserContext } from '../../context/context';
+import { UserContext, CartContext } from '../../context/context';
 
 import "./Header.scss";
 
@@ -12,7 +12,7 @@ import avatarImg from "../../img/avatar.svg"
 
 export const Header = () => {
   const navigate = useNavigate();
-
+  const [cart] = useContext(CartContext)
   const [user, setUser] = useContext(UserContext);
   const location = useLocation();
 
@@ -20,16 +20,18 @@ const handleSignOut = () => {
   localStorage.removeItem('user');
   setUser(null);
 }
+
 return (
   <Navbar className='header-navbar'>
     <Container className='container'>
-      <Navbar.Brand>JS BAND STORE / Your full name</Navbar.Brand>
+      <Navbar.Brand onClick={()=>navigate('/books')}>JS BAND STORE / Evgen Pluzhnikov</Navbar.Brand>
       <Navbar.Collapse className="justify-content-end">
         
         {location.pathname !== "/signin" && <Nav>
 
           <Button variant="outline-dark" className='healer-cart-img' onClick={() => navigate('/cart')}>
             <Image src={cartImg} alt="shopping cart icon" className="cart-img" rounded />
+            ({cart.length})
           </Button>
 
           <Button variant="outline-dark" onClick={handleSignOut} >Sign-Out</Button>

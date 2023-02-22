@@ -1,5 +1,7 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
+
 import { Image, Button, Container, Row, Col, Form } from "react-bootstrap";
+
 import { useParams } from 'react-router-dom';
 import { Navigate } from 'react-router-dom';
 
@@ -7,15 +9,33 @@ import "./Specific-book.scss";
 
 import data from "../../fixtures/books.json"
 
+import { CartContext } from "../../context/context";
+
 export const SpecificBook = () => {
+  const [cart, setCart] = useContext(CartContext);
   const [amount, setAmount] = useState(1);
   const { id } = useParams();
   const book = data.books.find((b) => b.id === +id);
+
   if (!book) return (<Navigate to="/books" replace />);
-  const handleAmountChange = (e)=> {
+
+  const handleAddToCart = () => {
+    console.log(typeof amount)
+    const newCart = [...cart];
+    const cartItem = newCart.find((item) => item.id === +id)
+    if (cartItem) {
+      cartItem.amount += amount;
+    } else {
+      newCart.push({ id: +id, amount })
+    }
+    console.log(newCart);
+    setCart(newCart)
+  };
+
+  const handleAmountChange = (e) => {
     let value = +e.target.value
-    if(value % 1 !== 0) return;
-    if(value < 1) value= ""
+    if (value % 1 !== 0) return;
+    if (value < 1) value = ""
     setAmount(value);
   }
 
@@ -52,16 +72,16 @@ export const SpecificBook = () => {
           <Row className="info">
             <Col md={7} className="title">Count</Col>
             <Col md={5}>
-              <Form.Control type="number" value={amount} onChange={handleAmountChange}/>
+              <Form.Control type="number" value={amount} onChange={handleAmountChange} />
             </Col>
           </Row>
           <Row className="info">
             <Col md={7} className="title">Total price, $</Col>
-            <Col md={5} className="value" >{book.price*amount}</Col>
+            <Col md={5} className="value" >{book.price * amount}</Col>
           </Row>
           <Row  >
             <Col md={12} className="btn-row">
-              <Button variant="outline-dark" className="addCard">Add to card</Button>
+              <Button variant="outline-dark" className="addCard" onClick={handleAddToCart}>Add to card</Button>
             </Col>
           </Row>
         </Col>
