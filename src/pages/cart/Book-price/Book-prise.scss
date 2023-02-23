@@ -1,13 +1,13 @@
-.book-price {
-  width: 100%;
+
   .book-price-line {
     border: 1px solid #000;
+    margin-top: 10px;
     .total-price {
       text-align: right;
+
     }
   }
   .price {
-    // display: flex;
     justify-content: flex-end;
     text-align: right;
     margin-top: 10px;
@@ -16,4 +16,10 @@
     }
 
   }
+  .cart-bt-col {
+    padding-right: 0;
+  .cart-bt{
+    float: right;
+  }
 }
+
