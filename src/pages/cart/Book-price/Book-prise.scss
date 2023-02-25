@@ -1,25 +1,17 @@
-
-  .book-price-line {
-    border: 1px solid #000;
-    margin-top: 10px;
-    .total-price {
-      text-align: right;
-
-    }
+.book-price-line {
+  align-items: center;
+  border: 1px solid #000;
+  margin-top: 10px;
   }
-  .price {
-    justify-content: flex-end;
-    text-align: right;
-    margin-top: 10px;
-    .price-text {
-      font-weight: bold;
-    }
-
-  }
-  .cart-bt-col {
-    padding-right: 0;
-  .cart-bt{
+.price {
+  justify-content: flex-end;
+  text-align: right;
+  margin-top: 10px;
+  font-weight: bold;
+}
+.cart-bt-col {
+  padding-right: 0;
+  .cart-bt {
     float: right;
   }
 }
-

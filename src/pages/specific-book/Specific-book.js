@@ -70,7 +70,7 @@ export const SpecificBook = () => {
           <Row className="info">
             <Col md={7} className="title">Count</Col>
             <Col md={5}>
-              <Form.Control type="number" value={amount} onChange={handleAmountChange} />
+              <Form.Control type="number" className="form-specific-book" value={amount} onChange={handleAmountChange} />
             </Col>
           </Row>
           <Row className="info">
