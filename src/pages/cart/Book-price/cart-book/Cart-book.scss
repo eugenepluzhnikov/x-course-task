@@ -1,3 +1,13 @@
+.book-price-line {
+  align-items: center;
+  border: 1px solid #000;
+  margin-top: 10px;
+
+  &.empty{
+    text-decoration: line-through;
+  }
+}
+
 .total-price {
   text-align: right;
   padding-right: 0;

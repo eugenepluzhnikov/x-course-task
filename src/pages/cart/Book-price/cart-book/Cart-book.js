@@ -20,11 +20,12 @@ export const CartBook = ({ id, amount }) => {
     if (newAmount < 0 || newAmount > 32) return;
     const newCart = [...cart]
     const currentItem = newCart.find((item) => item.id === id)
-    currentItem.amount = newAmount
+    currentItem.amount = +newAmount
     setCart(newCart)
   }
+
   return (
-    <Row className="book-price-line">
+    <Row className={`book-price-line${!amount ? ' empty' : ''}`}>
       <Col md={6}>{book.title}</Col>
       <Col md={3}>{book.author}</Col>
       <Col md={2} className="total-price" >${book.price} x</Col>
