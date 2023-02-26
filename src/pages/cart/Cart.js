@@ -9,7 +9,6 @@ import { CartEmpty } from "./Cart-empty/Cart-empty"
 import "./Cart.scss";
 
 export const Cart = () => {
-
   const [cart] = useContext(CartContext);
   return (
     <Container className="cart">
