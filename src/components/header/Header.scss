@@ -2,12 +2,14 @@
   border: 1px solid #000;
   .container {
     width: 100%;
+    .brand {
+      cursor: pointer;
+    }
     .healer-cart-img {
       margin-right: 20px;
     }
     .cart-img {
       height: 40px;
-      // margin-ri
     }
     .avatar {
       height: 40px;

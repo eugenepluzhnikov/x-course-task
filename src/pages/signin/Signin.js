@@ -3,6 +3,7 @@ import { Container, Image, Form, Button } from "react-bootstrap";
 import { useNavigate } from 'react-router-dom';
 
 import { UserContext } from "../../context/context";
+import { LOCAL_STORAGE } from "../../App.constants";
 
 import avatar2 from "../../img/avatar2.svg";
 
@@ -15,7 +16,7 @@ export const Signin = () => {
   const handleForm = (e) => {
     e.preventDefault();
     if(!name)return;
-    localStorage.setItem("user", name);
+    localStorage.setItem(LOCAL_STORAGE.USER, name);
     setUser(name);
     navigate('/books');
   }

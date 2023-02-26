@@ -4,6 +4,7 @@ import { useContext } from 'react';
 
 
 import { UserContext, CartContext } from '../../context/context';
+import { LOCAL_STORAGE } from '../../App.constants';
 
 import "./Header.scss";
 
@@ -17,14 +18,14 @@ export const Header = () => {
   const location = useLocation();
 
   const handleSignOut = () => {
-    localStorage.removeItem('user');
+    localStorage.removeItem(LOCAL_STORAGE.USER);
     setUser(null);
   }
 
   return (
     <Navbar className='header-navbar'>
       <Container className='container'>
-        <Navbar.Brand onClick={() => navigate('/books')}>JS BAND STORE / Evgen Pluzhnikov</Navbar.Brand>
+        <Navbar.Brand className="brand" onClick={() => navigate('/books')}>JS BAND STORE / Evgen Pluzhnikov</Navbar.Brand>
         <Navbar.Collapse className="justify-content-end">
 
           {location.pathname !== "/signin" &&
