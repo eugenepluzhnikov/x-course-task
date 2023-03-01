@@ -1,0 +1,12 @@
+.book-view {
+  margin-bottom: 20px;
+
+  .form-book {
+    border: 1px solid #000;
+    padding: 10px;
+    height: 100%;
+    .title-book {
+      font-weight: bolder;
+    }
+  }
+}

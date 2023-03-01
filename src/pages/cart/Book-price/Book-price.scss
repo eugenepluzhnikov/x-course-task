@@ -1,0 +1,16 @@
+.price {
+  justify-content: flex-end;
+  text-align: right;
+  margin-top: 10px;
+  font-weight: bold;
+}
+.cart-bt-col {
+  padding-right: 0;
+  padding-left: 0;
+  .cart-bt {
+    float: right;
+  }
+  .cart-bt-clear {
+    float: left;
+  }
+}
