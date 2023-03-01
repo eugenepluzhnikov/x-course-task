@@ -6,7 +6,11 @@
 }
 .cart-bt-col {
   padding-right: 0;
+  padding-left: 0;
   .cart-bt {
     float: right;
+  }
+  .cart-bt-clear {
+    float: left;
   }
 }

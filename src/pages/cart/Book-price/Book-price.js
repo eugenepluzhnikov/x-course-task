@@ -36,7 +36,7 @@ export const BookPrice = () => {
           </Button>
           <Button
             variant="outline-dark"
-            className="cart-bt"
+            className="cart-bt-clear"
             onClick={handleClearCart}
           >
             Clear Cart
