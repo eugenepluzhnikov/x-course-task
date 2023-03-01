@@ -98,12 +98,8 @@ export const SpecificBook = () => {
           </Row>
           <Row>
             <Col md={12} className="btn-row">
-              <Button
-                variant="outline-dark"
-                className="addCard"
-                onClick={handleAddToCart}
-              >
-                Add to card
+              <Button variant="outline-dark" onClick={handleAddToCart}>
+                Add to cart
               </Button>
             </Col>
           </Row>

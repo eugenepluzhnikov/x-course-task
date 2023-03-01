@@ -22,6 +22,11 @@ export const BookPrice = () => {
   }, [cart]);
 
   const handleClearCart = () => setCart([]);
+  const handlePurchase = () => {
+    handleClearCart();
+    alert('Success');
+    navigate('/books');
+  };
 
   return (
     <>
@@ -30,7 +35,7 @@ export const BookPrice = () => {
           <Button
             variant="outline-dark"
             className="cart-bt"
-            onClick={() => navigate('/books')}
+            onClick={handlePurchase}
           >
             Purchase
           </Button>
